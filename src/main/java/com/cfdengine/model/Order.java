@@ -21,7 +21,7 @@ public abstract class Order {
         this.status = OrderStatus.PENDING;
         this.createdAt = Instant.now();
     }
-
+    public BigDecimal getSize(){return size;}
     public OrderStatus getStatus() {
         return status;
     }
@@ -29,4 +29,6 @@ public abstract class Order {
     public void setStatus(OrderStatus status) {
         this.status = status;
     }
+
+    public String getInstrument() { return instrument; }
 }
